@@ -26,3 +26,11 @@ btn.addEventListener('click', () => {
     console.log(numResult, strResult);
     printResult({ val: result, timeStamp: new Date() });
 });
+const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("It worked!");
+    }, 3000);
+});
+myPromise.then((res) => {
+    console.log(res.split(' '));
+});
